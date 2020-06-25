@@ -76,8 +76,27 @@ ul {
    ========================================================================== */
 
 body {
-  font-family: Montserrat;
-  background-color: aliceblue;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  background: rgb(38, 16, 70);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(38, 16, 70, 1) 0%,
+    rgba(74, 45, 115, 1) 40%,
+    rgba(136, 78, 217, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(38, 16, 70, 1) 0%,
+    rgba(74, 45, 115, 1) 40%,
+    rgba(136, 78, 217, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(38, 16, 70, 1) 0%,
+    rgba(74, 45, 115, 1) 40%,
+    rgba(136, 78, 217, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#261046",endColorstr="#884ed9",GradientType=1);
   height: 100% !important;
 }
 
@@ -175,6 +194,7 @@ header {
   font-weight: 600;
   color: aliceblue;
   margin-bottom: 40px;
+  text-shadow: 1px 1px 2px #252326;
 }
 
 .projects {
@@ -196,16 +216,16 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  -webkit-box-shadow: 0 0 5px 3px #4a2d7388;
-  box-shadow: 0 0 5px 3px #4a2d7388;
+  -webkit-box-shadow: 0 0 5px 1px #4a2d7388;
+  box-shadow: 0 0 5px 1px #4a2d7388;
 }
 
 .card img {
   margin: -10px auto 0px;
   width: 95%;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 3px #4a2d7388;
-  box-shadow: 0 0 5px 3px #4a2d7388;
+  -webkit-box-shadow: 0 0 5px 1px #4a2d7388;
+  box-shadow: 0 0 5px 1px #4a2d7388;
 }
 
 .card-content {
@@ -218,13 +238,17 @@ header {
 
 .card-content h3 {
   font-size: 24px;
+  text-shadow: 0px 1px 2px #252326;
+  color: #4a2d73;
   font-weight: 800;
   margin-bottom: 10px;
 }
 
 .card-content p {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 12px;
+  text-shadow: 0px 0px 1px #252326;
+  text-align: justify;
+  font-weight: 500;
 }
 
 .card-content a {
@@ -266,8 +290,8 @@ header {
   border-radius: 5px;
   font-weight: 800;
   color: #4a2d73;
-  -webkit-box-shadow: 0 0 5px 3px #4a2d7388;
-  box-shadow: 0 0 5px 3px #4a2d7388;
+  -webkit-box-shadow: 0 0 5px 1.5px #4a2d7388;
+  box-shadow: 0 0 5px 1.5px #4a2d7388;
   transition: all 0.3s;
 }
 

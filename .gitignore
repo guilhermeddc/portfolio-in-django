@@ -1,3 +1,4 @@
 /media/projects
 /core/__pycache__
 /core/migrations/__pycache__
+/db.sqlite3

@@ -35,7 +35,7 @@ class Profile(models.Model):
     image = models.ImageField('Foto de perfil', upload_to=upload_image_path)
     title = models.CharField('Título do perfil', max_length=50)
     sub_title = models.CharField('Subtítulo do perfil', max_length=150)
-    description = models.TextField('Descrição do projeto', max_length=1000)
+    description = models.TextField('Descrição do perfil', max_length=1000)
     locality = models.ForeignKey('Locality', verbose_name='Localização', on_delete=models.CASCADE)
     country = models.CharField('País', max_length=20)
     site_url = models.CharField('URL do site', max_length=100)
