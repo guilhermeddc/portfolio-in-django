@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home | {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+
+<div class="content">
+    <h1>Meus projetos</h1>
+    <div class="projects">
+        {% for project in project_list %}
+            <div class="card">
+                <img src="{{ project.image.url }}" alt="{{ project }}">
+                <div class="card-content">
+                    <h3>{{ project }}</h3>
+                    {{ project.description | linebreaks }}
+
+                    <a href="{{ project.link }}" target="_blank">Saiba mais</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="paginator">
+        <nav>
+            <ul>
+                {% for page in paginator.page_range %}
+                    <li {% if page_obj.number == page %}class="active"{% endif %}>    
+                        <a href="?page={{ page }}">{{ page }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</div>
+
+{% endblock content %}
